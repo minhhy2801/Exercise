@@ -7,15 +7,15 @@ public class Ex1
 {
     public static int checkPrimes(int a)
 	{
-        int i, h = 0;
+        int i, cout = 0;
         for(i = 1; i < a; i++)
 		{
             if( a % i == 0)
 			{
-                h++;
+                cout++;
             }
         }
-        if ( h == 1)
+        if ( cout == 1)
 		{
             System.out.printf("%d\n",a);
             return 1;
@@ -25,7 +25,7 @@ public class Ex1
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        int i, j = 0, input = 0, t;
+        int i, j = 0, input = 0, flag;
         System.out.print("Input a number: ");
         //Check Input
         do
@@ -43,16 +43,16 @@ public class Ex1
                     while(input < 0);
                 }
                 System.out.println("Primes list: ");
-                t = 1;
+                flag = 1;
         	}
 			catch (Exception ex)
 			{
 				System.out.print("Please input a number: ");
-				t = 0;
+				flag = 0;
 				String l = sc.nextLine();
 			}
         }
-        while( t == 0);
+        while( flag == 0);
 		
         for(i = 1; j < input; i++)
 		{
