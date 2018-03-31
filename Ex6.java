@@ -46,14 +46,10 @@ public class Ex6 {
             System.out.print("Input color: ");
             this.color = sc.nextLine();
         }
-        
-        public String output(){
-            String s = String.format("%25s %10.2f %8s",this.name ,this.height ,this.color );
-            return s;
-        }
-        
+   
         public void  printInfo(){
-        System.out.println(output());
+            String s = String.format("%25s %10.2f %8s",this.name ,this.height ,this.color );
+            System.out.println(s);
         }   
         
         public Dog(){
@@ -100,9 +96,6 @@ public class Ex6 {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        String name;
-        double height;
-        String color;
         
         Dog dg = new Dog();
         dg.info();
