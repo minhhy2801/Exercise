@@ -16,6 +16,7 @@ public class Ex5 {
         private double price;
         private String color;
         private double vat;
+        
     public Product(){
         this("Unknown", 0000, "Unknown");
     }
@@ -34,12 +35,6 @@ public class Ex5 {
     
     private void computeVAT(){
         this.vat = this.price * 0.1;
-    }
-    
-    public String output()
-    {
-        String s = String.format("%25s %10.2f %8s %10.2f",this.name ,this.price ,this.color, this.vat );
-        return s;
     }
     
     public void  inputProduct(){
@@ -79,7 +74,8 @@ public class Ex5 {
     
     public void  printProduct(){
         computeVAT();
-        System.out.println(output());
+        String s = String.format("%25s %10.2f %8s %10.2f",this.name ,this.price ,this.color, this.vat );
+        System.out.println(s);
     }
     
     }
@@ -88,9 +84,6 @@ public class Ex5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String name;
-        double price;
-        String color;
         
         Product prd = new Product();
         prd.inputProduct();
